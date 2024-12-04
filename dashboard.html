@@ -3,77 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>New Page</title>
+    <title>Dashboard Layout</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <!-- Navbar -->
-    <section class="bg-lime-800 py-6 text-white font-semibold">
-      <div class="container flex flex-row mx-auto justify-between">
-        <ul>
-          <li class="my-auto">Logo</li>
-        </ul>
-        <ul class="flex flex-row gap-6">
-          <li class="my-auto">
-            <a href="index.html" class="hover:text-gray-300">Home</a>
-          </li>
-          <li class="my-auto">
-            <a href="#" class="hover:text-gray-300">About Us</a>
-          </li>
-          <li class="my-auto">
-            <a href="#" class="hover:text-gray-300">Courses</a>
-          </li>
-          <li class="my-auto">
-            <a href="#" class="hover:text-gray-300">Success</a>
-          </li>
-          <li class="my-auto">
-            <a href="#" class="hover:text-gray-300">Contact</a>
-          </li>
-          <li class="my-auto">
-            <a href="#" class="hover:text-gray-300">Certificate</a>
-          </li>
-        </ul>
-        <ul class="flex flex-row">
-          <li class="my-auto">
-            <a href="#" class="hover:text-gray-300">Login</a>
-          </li>
-        </ul>
-      </div>
-    </section>
+  <body class="bg-gray-100">
+    <div class="flex h-screen">
+      <!-- Sidebar -->
+      <div class="w-64 bg-[#FFFFFF] text-black  flex flex-col p-4">
+        <img src="/Images/Home/logo/1.png" alt="">
+        <!-- <h1 class="text-2xl font-bold mb-4">Dashboard</h1> -->
 
-    <div class="flex flex-1">
-      <!-- Left Slider -->
-      <aside class="bg-teal-800 w-64 p-4 text-white">
-        <h2 class="font-bold text-lg mb-4">Slider</h2>
-        <ul class="space-y-2">
-          <li>
-            <a href="#" class="block hover:bg-gray-300 p-2 rounded" id="slider1">Table </a>
-          </li>
-          <li>
-            <a href="#" class="block hover:bg-gray-300 p-2 rounded" id="slider2">Form</a>
-          </li>
-        </ul>
-      </aside>
-      <main class="flex-1 bg-gray-50 p-6">
-        <div id="sliderContent" class="hidden">
+        <nav>
+          <a href="#" class="block mt-8 py-2 px-4 rounded hover:bg-blue-800" id="table-link">Dashboard</a>
+          <a href="/table" class="block py-2 px-4 rounded hover:bg-blue-800" id="table-link">Table</a>
+          <a href="/form" class="block py-2 px-4 rounded hover:bg-blue-800" id="form-link">Form</a>
+        </nav>
+      </div>
+
+      <!-- Main Content -->
+      <div class="flex-1 flex flex-col">
+        <!-- Navbar -->
+        <div class="bg-white shadow p-4 flex justify-between items-center">
+          <h2 class="text-lg font-semibold">Navbar</h2>
+          <div class="flex space-x-4">
+            <input
+              type="text"
+              placeholder="Search..."
+              class="border rounded px-4 py-2 focus:outline-none"
+            />
+            <button class="bg-blue-700 text-white px-4 py-2 rounded">Logout</button>
+          </div>
         </div>
-      </main>
+
+        <!-- Main Content Area -->
+        <div id="main-content" class="flex-1 p-6">
+          <h3 class="text-xl font-bold mb-4">Main Content</h3>
+          <div class="bg-white shadow rounded p-4">
+            <p>This is where the main content goes. Add your components or information here.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-6">
-      <div class="container mx-auto flex justify-between items-center">
-        <div>
-          <p>&copy; 2024 Your Company. All rights reserved.</p>
-        </div>
-        <div class="flex space-x-6">
-          <a href="#" class="hover:text-gray-400">Privacy Policy</a>
-          <a href="#" class="hover:text-gray-400">Terms of Service</a>
-          <a href="#" class="hover:text-gray-400">Contact</a>
-        </div>
-      </div>
-    </footer>
-
-        <script src="js/slider.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
