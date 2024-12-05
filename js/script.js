@@ -84,7 +84,7 @@ function loadContent(route) {
   if (templates[route]) {
     mainContent.innerHTML = templates[route];
   } else {
-    mainContent.innerHTML = "<p>Page not found</p>";
+    mainContent.innerHTML = "<p>Dashboard not found</p>";
   }
 }
 
@@ -107,3 +107,6 @@ window.addEventListener("popstate", (event) => {
 // Load initial content based on URL
 const initialRoute = window.location.pathname.split("/").pop() || "table";
 loadContent(initialRoute);
+
+
+
